@@ -4,16 +4,14 @@
   "parameters": {
     "adminUsername": {
       "type": "string",
-      "defaultValue": "Student",
       "metadata": {
-        "description": "Username for the Virtual Machine."
+        "description": "Username for the Windows VM"
       }
     },
     "adminPassword": {
-      "type": "string",
-      "defaultValue": "Pa55w.rd1234",
+      "type": "securestring",
       "metadata": {
-        "description": "Password for the Virtual Machine."
+        "description": "Password for the Windows VM"
       }
     },
     "windowsOSVersion": {
@@ -35,16 +33,16 @@
   },
   "variables": {
     "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sawinvm')]",
-    "nicName": "20533D0601-nic",
+    "nicName": "20533E0601-nic",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "subnet-0",
     "subnetPrefix": "10.0.0.0/24",
-    "publicIPAddressName": "20533D0601-pip",
-    "vmName": "20533D0601-vm1",
-    "virtualNetworkName": "20533D0601-vnet",
+    "publicIPAddressName": "20533E0601-pip",
+    "vmName": "20533E0601-vm1",
+    "virtualNetworkName": "20533E0601-vnet",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
     "dnsLabelPrefix": "[concat('dns', uniquestring(resourceGroup().id))]",
-    "networkSecurityGroupName": "20533D0601-nsg"
+    "networkSecurityGroupName": "20533E0601-nsg"
   },
   "resources": [
     {

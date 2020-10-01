@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "Student"
+      "value": "student"
     },
     "adminPassword": {
       "value": "Pa55w.rd1234"
